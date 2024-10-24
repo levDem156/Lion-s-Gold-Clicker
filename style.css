@@ -16,6 +16,138 @@ body{
 }
 
 
+.dast_reg{
+    width: 100%;
+    position: absolute; /* Абсолютное позиционирование внутри main */
+    bottom: 0; /* Остаётся внизу контейнера main */
+    left: 0;
+
+    display: flex; 
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+
+}
+
+
+/*первое достижение*/
+#dast_block {
+    width: 100%;
+    z-index: 10; /* Перекрывает другие блоки внутри main */
+
+    justify-content: center;
+    display: none; /*flex*/
+}
+
+/*второе достижение*/
+#dast_block2 {
+    width: 100%;
+    z-index: 10; /* Перекрывает другие блоки внутри main */
+
+    justify-content: center;
+    display: none; /*flex*/
+}
+
+/*третье достижение*/
+#dast_block3 {
+    width: 100%;
+    z-index: 10; /* Перекрывает другие блоки внутри main */
+
+    justify-content: center;
+    display: none; /*flex*/
+}
+
+/*четвёртое достижение*/
+#dast_block4 {
+    width: 100%;
+    z-index: 10; /* Перекрывает другие блоки внутри main */
+
+    justify-content: center;
+    display: none; /*flex*/
+}
+
+/*пятое достижение*/
+#dast_block5{
+    width: 100%;
+    z-index: 10; /* Перекрывает другие блоки внутри main */
+
+    justify-content: center;
+    display: none; /*flex*/
+}
+
+
+.dastijenie{
+    background-color: #272323;
+    width: 400px;
+    border-radius: 5px;
+
+    border: 3px ridge rgb(205, 167, 0);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.dast_name{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dast_name h1{
+    font-size: 19px;
+    margin: 0;
+    color: #ffffff;
+
+    margin-bottom:5px;
+}
+
+.dast_name p{
+    font-size: 15px;
+    margin: 0;
+    color: #ffffff;
+
+    margin-top: 15px;
+}
+
+.delete_d{
+    margin-right: 4px;
+    margin-top: 4px;
+    user-select: none;    /* Отключает выделение */
+    cursor: pointer;      /* Изменяет курсор на "руку" */
+    -webkit-user-drag: none; /* Отключает перетаскивание в WebKit-браузерах */
+    -moz-user-select: none;   /* Отключает выделение в Firefox */
+    -ms-user-select: none;    /* Отключает выделение в старых IE */
+
+    background-image: url("icon/delete.png");
+    background-size: cover; /* Изображение растягивается по всей площади блока */
+    background-position: center; /* Центрирование фона */
+    background-repeat: no-repeat; /* Отключаем повторение изображения */
+    background-size: 20px 20px;
+    width: 25px;
+    height: 25px;
+}
+
+.delete_d:hover{
+    background-image: url("icon/delete2.png");
+    background-size: cover; /* Изображение растягивается по всей площади блока */
+    background-position: center; /* Центрирование фона */
+    background-repeat: no-repeat; /* Отключаем повторение изображения */
+    background-size: 30px 30px;
+}
+
+.line_gorizontal{
+    width: 250px;
+    height: 2px;
+    background: rgb(39,35,35);
+    background: linear-gradient(90deg, rgba(39,35,35,1) 0%, rgba(255,255,255,1) 44%, rgba(39,35,35,1) 90%, rgba(47,47,47,1) 100%, rgba(0,116,139,1) 100%);}
+
+
 
 .container{
     display: flex;
@@ -403,6 +535,8 @@ main{
 
     overflow-x: hidden;
     overflow-y: hidden;
+
+    position: relative;
     
 }
 
@@ -411,6 +545,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-height: 150px;
     height: 150px;
     margin-top: 30px;
 }

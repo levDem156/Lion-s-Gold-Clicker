@@ -15,11 +15,19 @@ let mayn_pay = 1000;
 let r_pay = 70000;
 let br_pay = 1000000;
 
+/*переменные для достижений (сколько кликов по товарам с нехваткой денег)*/
+let hacker_ban = 0;
+let mayning_ban = 0;
+let router_ban = 0;
+let brocker_ban = 0;
+
+
 function alerted(){
      
     dohod_click = 1 + 2*(hack) + 3*(router);
 
     score += dohod_click;
+
 
     console.log(score)
 
@@ -88,7 +96,7 @@ function hack_press(){
             hack_arr.style.display = "flex";
         }
     }else{
-        console.log("Вы попросили хакера за бесплатно к вам устроиться. Хакер от бешенства попытался взламать вас, но постыдился, увидев ваш счёт)")
+        hacker_ban+=1;
     }
 
 }
@@ -162,7 +170,7 @@ function myning_press(){
             mn_arr.style.display = "flex";
         }
     }else{
-        console.log("У вас не хватило денег на RTX 4050 и вы от отчаяния застрелились, ваше место занял другой жизнеспособный идиот)")
+        mayning_ban+=1;
     }
 }
 
@@ -234,7 +242,7 @@ function router_press(){
             rt_arr.style.display = "flex";
         }
     }else{
-        console.log("Вы попытались стащить роутер за бесплатно, но вас увидели и избили)")  /* сделать достижение "бессмертный" */
+        router_ban+=1;
     }
 }
 
@@ -306,7 +314,7 @@ function brocker_press(){
             br_arr.style.display = "flex";
         }
     }else{
-        console.log("Брокер послал вас нахер)")
+        brocker_ban+=1;
     }
 }
 
@@ -626,3 +634,102 @@ coin.addEventListener('mouseout', () => {
     }
     console.log("fdkvn")
 });
+
+
+
+
+
+const delete_d = document.getElementById('delete_d1');
+
+// удаление 1-го блока
+delete_d.addEventListener('mouseup', () => {
+    var d_block = document.getElementById("dast_block");
+    d_block.style.display = "none";
+});
+
+
+const delete_d2 = document.getElementById('delete_d2');
+
+// удаление 2-го блока
+delete_d2.addEventListener('mouseup', () => {
+    var d_block = document.getElementById("dast_block2");
+    d_block.style.display = "none";
+});
+
+
+
+const delete_d3 = document.getElementById('delete_d2');
+
+// удаление 2-го блока
+delete_d3.addEventListener('mouseup', () => {
+    var d_block = document.getElementById("dast_block3");
+    d_block.style.display = "none";
+});
+
+
+
+const delete_d4 = document.getElementById('delete_d2');
+
+// удаление 2-го блока
+delete_d4.addEventListener('mouseup', () => {
+    var d_block = document.getElementById("dast_block4");
+    d_block.style.display = "none";
+});
+
+
+
+
+const delete_d5 = document.getElementById('delete_d5');
+
+// удаление 2-го блока
+delete_d5.addEventListener('mouseup', () => {
+    var d_block = document.getElementById("dast_block5");
+    d_block.style.display = "none";
+});
+
+
+
+
+
+/*monitoring достижений*/
+
+function dostij(){
+    /*превое достижение*/
+    if(score==1){
+        var d_block = document.getElementById("dast_block");
+        d_block.style.display = "flex";
+    }
+
+    /*второе достижение*/
+    if(hacker_ban==100){
+        var d_block = document.getElementById("dast_block2");
+        d_block.style.display = "flex";
+        console.log("Вы 100-й раз попросили хакера за бесплатно к вам устроиться. Хакер от бешенства попытался взламать вас, но постыдился, увидев ваш счёт)")
+    
+    }
+
+    /*третье достижение*/
+    if(mayning_ban==200){
+        var d_block = document.getElementById("dast_block3");
+        d_block.style.display = "flex";
+        console.log("У вас 200-й не хватило денег на RTX 4050 и вы от отчаяния застрелились, ваше место занял другой жизнеспособный идиот)")
+
+    }
+
+    /*четвёртое достижение*/
+    if(router_ban==300){
+        var d_block = document.getElementById("dast_block4");
+        d_block.style.display = "flex";
+        console.log("Вы 300-й раз попытались стащить роутер за бесплатно, но вас увидели и избили)")  /* сделать достижение "бессмертный" */
+    }
+
+    /*пятое достижение*/
+    if(brocker_ban==400){
+        var d_block = document.getElementById("dast_block5");
+        d_block.style.display = "flex";
+        console.log("Брокер послал вас нахер)")
+    }
+}
+
+setInterval(dostij, 50);
+
