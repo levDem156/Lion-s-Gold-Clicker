@@ -1,1 +1,1 @@
-# Lion-s-Gold-Clicker
+# Lion's Gold Clicker
