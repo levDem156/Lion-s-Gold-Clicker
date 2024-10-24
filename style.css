@@ -402,7 +402,7 @@ main{
     user-select:none; /*запрещаем выделять*/
 
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
     
 }
 
