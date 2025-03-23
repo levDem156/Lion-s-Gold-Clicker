@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lion's Gold Clicker</title>
+
+    <link href="style.css" rel="stylesheet">
+    <link href="curs.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=LXGW+WenKai+Mono+TC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="inf" id="inf_block">
+        <div class="close_bl"><img src="icon/close.png", width="50px", height="50px", style="margin: 5px;", class="close_icon" , onclick="close_inf()"></div>
+    </div>
+
+    <div class="settings" id="stngs_block">
+        <div class="close_stngs"><img src="icon/close.png", width="50px", height="50px", style="margin: 5px;", class="close_icon" , onclick="close_stngs()"></div>
+    </div>
+
+    <header>
+        <div class = "header_select"><h6>LD Coin Clicker  V-- 1.5   2025</h6></div>
+        <div class = "header_select"><h6>The best game ever: Doom Eternal</h6></div>
+        <a href="https://clicker.local/sing_in/sing_in.html" class = "header_select"><h5 style="font-weight:400;">Войти</h5></a>
+    </header>
+
+    <div class="Game_block">
+
+        <div class="store">
+            <div class="store_scroll">
+                <h1>Store</h1>
+                <div class="tovar">
+
+                    <div class="num_tovar", id = "tovar_h">
+                        <div class="character">
+                            <p class="tv_name">Хакер</p>
+                            <p class="tv_opis">Взламывает профили на бирже и заставляет вложится в монету</p>
+                        </div>
+                        <div class="tovar_img"><img src="img/hack.png", width="50px"><p id = "h_sell">30</p></div>
+                    </div>
+                    
+                    <div class="num_tovar", id = "tovar_m">
+                        <div class="character">
+                            <p class="tv_name">Майнинг ферма</p>
+                            <p class="tv_opis">Добывают монету: увеличивает прибыль</p>
+                        </div>
+                        <div class="tovar_img"><img src="img/hack.png", width="50px"><p id = "m_sell">1 K</p></div>
+                    </div>
+
+                    <div class="num_tovar", id = "tovar_r">
+                        <div class="character">
+                            <p class="tv_name">Роутер</p>
+                            <p class="tv_opis">Улучшает интернет</p>
+                        </div>
+                        <div class="tovar_img"><img src="img/hack.png", width="50px"><p id = "r_sell">70.0 K</p></div>
+                    </div>
+
+                    <div class="num_tovar", id = "tovar_br">
+                        <div class="character">
+                            <p class="tv_name">Брокер с Wall S.</p>
+                            <p class="tv_opis">Обзванивает людей, предлогает вложится в монету</p>
+                        </div>
+                        <div class="tovar_img"><img src="img/hack.png", width="50px"><p id = "br_sell">1 M</p></div>
+                    </div>
+
+                    <div class="num_tovar">
+                        <div class="character">
+                            <p class="tv_name">Ветряк</p>
+                            <p class="tv_opis">Больше электричества, м.ферма добывает больше монет</p>
+                        </div>
+                        <div class="tovar_img"><img src="img/hack.png", width="50px"><p>100 M</p></div>
+                    </div> 
+
+                    
+                </div>
+            </div>
+
+            <div class = "Deystv">
+
+                <div class = "num_of_buy">
+                    <p class="pg_ch Tovar_SH" data-size="1" id = "sizeTov1">1</p>
+                    <p class="pg_ch Tovar_SH_None" data-size="10" id = "sizeTov2">10</p>
+                    <p class="pg_ch Tovar_SH_None" data-size="100" id = "sizeTov3">100</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="infa">
+            <div class="grafic">
+                <div class="kurs_since">
+                    <div class="kurs_block_spawn", id="fon">
+
+                            <div class="button_buy_action_block" , id="buy_a_fon">
+                                <div class="button_buy_action", onclick="open_menu_a()"><h1>Покупка Акций</h1></div> <!-- кнопка Акции -->         
+                                <div class="button_sell_action", onclick="open_menu_sell_a()"><h1>Продажа Акций</h1></div> <!-- кнопка Акции -->
+                            </div>
+                        
+                        <div class="Buy_action_menu", id="menu_a_fon2"><!-- Панель инвестицый -->
+                            <div class="Buy_action_menu_child">
+                                <div class="menu_action_up">
+                                    <div class="buy_action" onclick="sell_actions()"><h1>Продать</h1></div>
+                                    <div class="close_menu_a", onclick="menuclose2()"></div>
+                                </div>
+                                <div class="menu_action_down">
+
+                                    <div class="action_cost">
+                                        <h1 id="cost_action_sell">У вас: 0 Акций</h1>
+                                    </div>
+
+                                    <!-- ввод кол-во акция для покупки-->
+                                    <div class="inpt_money_action">
+
+
+                                        <!-- input для ввода числа денег-->
+                                        <div class="input-container">
+                                            <img src="img/doom.png" width="30px"> <!-- Иконка, можно использовать Font Awesome или другую библиотеку иконок -->
+                                            <input type="number" maxlength="3" placeholder="акции" oninput="limitInput(this)" id="inputFieldMoneySell" style="padding-left: 0px;">
+                                        </div>   
+
+                                        <!-- выбор размера оплаты-->
+                                        <div class="variants_of_money" id="variants_of_money_block_sell">
+                                            <h2 id="SCH1">M</h2>
+                                            <h2 id="SCH2">K</h2>
+                                            <h2 id="SCH3">X</h2>
+                                        </div>
+
+                                        <!-- кнопки для смена размера оплаты-->
+                                        <div class="money_choose">
+                                            <div class="choose_up" onclick="plus_variant_sell()"></div>
+                                            <div class="line_ch"></div>
+                                            <div class="choose_down" onclick="minus_variant_sell()"></div>
+                                        </div>
+                                    </div>
+
+
+                                
+                                </div>
+                            </div>
+                        </div> 
+
+
+                        <div class="Buy_action_menu", id="menu_a_fon"><!-- Панель инвестицый -->
+                            <div class="Buy_action_menu_child">
+                                <div class="menu_action_up">
+                                    <div class="buy_action" onclick="buy_actions()"><h1>Купить</h1></div>
+                                    <div class="close_menu_a", onclick="menuclose()"></div>
+                                </div>
+                                <div class="menu_action_down">
+
+                                    <div class="action_cost">
+                                        <h1 id="cost_action">Цена 1K акции: 1M</h1>
+                                    </div>
+
+                                    <!-- ввод кол-во акция для покупки-->
+                                    <div class="inpt_money_action">
+
+
+                                        <!-- input для ввода числа денег-->
+                                        <div class="input-container">
+                                            <img src="img/doom.png" width="30px"> <!-- Иконка, можно использовать Font Awesome или другую библиотеку иконок -->
+                                            <input type="number" maxlength="3" placeholder="акции" oninput="limitInput(this)" id="inputFieldMoney" style="padding-left: 0px;">
+                                        </div>   
+
+                                        <!-- выбор размера оплаты-->
+                                        <div class="variants_of_money" id="variants_of_money_block">
+                                            <h2 id="VCH1">M</h2>
+                                            <h2 id="VCH2">K</h2>
+                                            <h2 id="VCH3">X</h2>
+                                        </div>
+
+                                        <!-- кнопки для смена размера оплаты-->
+                                        <div class="money_choose">
+                                            <div class="choose_up" onclick="plus_variant()"></div>
+                                            <div class="line_ch"></div>
+                                            <div class="choose_down" onclick="minus_variant()"></div>
+                                        </div>
+                                    </div>
+
+
+                                
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="Check">
+                        <div><h1 id="ch8">8</h1></div>
+                        <div><h1 id="ch7">7</h1></div>
+                        <div><h1 id="ch6">6</h1></div>
+                        <div><h1 id="ch5">5</h1></div>
+                        <div><h1 id="ch4">4</h1></div>
+                        <div><h1 id="ch3">3</h1></div>
+                        <div><h1 id="ch2">2</h1></div>
+                        <div><h1 id="ch1">1</h1></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="working">
+                <div class="floors"> 
+                    <!-- хакеры -->
+                    <div class = "work_floor", id = "h_sect">
+                        <img src="img/h1.png", id="h1">
+                        <img src="img/h2.png", id="h2">
+                        <img src="img/h4.png", id="h3">
+                        <img src="img/h3.png", id="h4">
+                        <img src="img/h3.png", id="h5">
+                        <img src="img/h1.png", id="h6">
+                        <img src="img/h2.png", id="h7">
+                        <img src="img/h4.png", id="h8">
+                        <img src="img/h1.png", id="h9">
+                        <img src="img/h1.png", id="h10">
+                        <img src="img/h2.png", id="h11">
+                        <img src="img/h4.png", id="h12">
+                        <img src="img/h3.png", id="h13">
+                        <img src="img/h2.png", id="h14">
+                        <img src="img/h4.png", id="h15">
+
+                        <img src="img/h4.png", id="h16", class = "mirror">
+                        <img src="img/h3.png", id="h17", class = "mirror">
+                        <img src="img/h3.png", id="h18", class = "mirror">
+                        <img src="img/h1.png", id="h19", class = "mirror">
+                        <img src="img/h2.png", id="h20", class = "mirror">
+                        <img src="img/h4.png", id="h21", class = "mirror">
+                        <img src="img/h3.png", id="h22", class = "mirror">
+                        <img src="img/h2.png", id="h23", class = "mirror">
+                        <img src="img/h1.png", id="h24", class = "mirror">
+                        <img src="img/h2.png", id="h25", class = "mirror">
+                        <img src="img/h1.png", id="h26", class = "mirror">
+
+                        <div class = 'inf_of_floor'>
+                            <h6 id = 'h_inf_click'>Прибыль за клик: 0</h6>
+                            <h6 id = 'h_inf_sec'>Прибыль в секунду: 0</h6>
+                        </div>
+                    </div>
+                    <div class = "work_floor" , id = "mn_sect">
+                        <!-- майнинговые фермы -->
+                        <img src="img/mayningfer.png", id="m1">
+                        <img src="img/mayningfer.png", id="m2">
+                        <img src="img/mayningfer.png", id="m3">
+                        <img src="img/mayningfer.png", id="m4">
+                        <img src="img/mayningfer.png", id="m5">
+                        <img src="img/mayningfer.png", id="m6">
+                        <img src="img/mayningfer.png", id="m7">
+                        <img src="img/mayningfer.png", id="m8">
+                        <img src="img/mayningfer.png", id="m9">
+                        <img src="img/mayningfer.png", id="m10">
+                        <img src="img/mayningfer.png", id="m11">
+                        <img src="img/mayningfer.png", id="m12">
+                        <img src="img/mayningfer.png", id="m13">
+                        <img src="img/mayningfer.png", id="m14">
+                        <img src="img/mayningfer.png", id="m15">
+                        <img src="img/mayningfer.png", id="m16">
+                        <img src="img/mayningfer.png", id="m17">
+                        <img src="img/mayningfer.png", id="m18">
+                        <img src="img/mayningfer.png", id="m19">
+                        <img src="img/mayningfer.png", id="m20">
+                        <img src="img/mayningfer.png", id="m21">
+                        <img src="img/mayningfer.png", id="m22">
+                        <img src="img/mayningfer.png", id="m23">
+                        <img src="img/mayningfer.png", id="m24">
+                        <img src="img/mayningfer.png", id="m25">
+                        <img src="img/mayningfer.png", id="m26">
+
+                        <div class = 'inf_of_floor'>
+                            <h6 id = 'm_inf_click'>Прибыль за клик: 0</h6>
+                            <h6 id = 'm_inf_sec'>Прибыль в секунду: 0</h6>
+                        </div>
+                    </div>
+                    <div class = "work_floor", id = "r_sect">
+                        <!-- роутеры -->
+                        <img src="img/ruter1.png", id="r1">
+                        <img src="img/ruter1.png", id="r2">
+                        <img src="img/ruter1.png", id="r3">
+                        <img src="img/ruter1.png", id="r4">
+                        <img src="img/ruter1.png", id="r5">
+                        <img src="img/ruter1.png", id="r6">
+                        <img src="img/router2.png", id="r7">
+                        <img src="img/router2.png", id="r8">
+                        <img src="img/router2.png", id="r9">
+                        <img src="img/router2.png", id="r10">
+                        <img src="img/router2.png", id="r11">
+                        <img src="img/router2.png", id="r12">
+                        <img src="img/router2.png", id="r13">
+                        <img src="img/router2.png", id="r14">
+                        <img src="img/router2.png", id="r15">
+                        <img src="img/router2.png", id="r16">
+                        <img src="img/router2.png", id="r17">
+                        <img src="img/router2.png", id="r18">
+                        <img src="img/router2.png", id="r19">
+
+                        <img src="img/ruter1.png" , class = "mirror", id="r20">
+                        <img src="img/ruter1.png" , class = "mirror", id="r21">
+                        <img src="img/ruter1.png" , class = "mirror", id="r22">
+                        <img src="img/ruter1.png" , class = "mirror", id="r23">
+                        <img src="img/ruter1.png" , class = "mirror", id="r24">
+                        <img src="img/ruter1.png" , class = "mirror", id="r25">
+                        <img src="img/ruter1.png" , class = "mirror", id="r26">
+
+                        <div class = 'inf_of_floor'>
+                            <h6 id = 'r_inf_click'>Прибыль за клик: 0</h6>
+                            <h6 id = 'r_inf_sec'>Прибыль в секунду: 0</h6>
+                        </div>
+                        
+                    </div>
+                    <div class = "work_floor" , id = "br_sect">
+                            <!-- брокеры -->
+                            <img src="img/b1.png", id="b1">
+                            <img src="img/b2.png", id="b2">
+                            <img src="img/b1.png", id="b3">
+                            <img src="img/b1.png", id="b4">
+                            <img src="img/b2.png", id="b5">
+                            <img src="img/b1.png", id="b6">
+                            <img src="img/b2.png", id="b7">
+                            <img src="img/b2.png", id="b8">
+                            <img src="img/b1.png", id="b9">
+                            <img src="img/b2.png", id="b10">
+                            <img src="img/b1.png", id="b11">
+                            <img src="img/b1.png", id="b12">
+                            <img src="img/b2.png", id="b13">
+                            <img src="img/b2.png", id="b14">
+                            <img src="img/b1.png", id="b15">
+                            <img src="img/b2.png", id="b16">
+                            <img src="img/b1.png", id="b17">
+                            <img src="img/b1.png", id="b18">
+                            <img src="img/b2.png", id="b19">
+                            <img src="img/b2.png", id="b20">
+                            <img src="img/b1.png", id="b21">
+                            <img src="img/b2.png", id="b22">
+                            <img src="img/b2.png", id="b23">
+                            <img src="img/b1.png", id="b24">
+                            <img src="img/b1.png", id="b25">
+                            <img src="img/b2.png", id="b26">
+
+                            <div class = 'inf_of_floor'>
+                                <h6 id = 'b_inf_click'>Прибыль за клик: 0</h6>
+                                <h6 id = 'b_inf_sec'>Прибыль в секунду: 0</h6>
+                            </div>
+                    </div>
+                    <div class = "work_floor", id = "v_sect">
+                        <!-- ветряки -->
+                         
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <main>
+            <div class="b_2">
+                <div class="Money_osnova">
+                    <div class="Money">
+                        <img src = "icon/info.png", width = "33px", class="info_btn", onclick = "inf()">
+
+                        <div class="line_block"></div>
+
+                        <div class="Money_score">
+                            <h1>Прибыль в секунду</h1>
+
+                            <div class="Money_score_prib">
+                                <img src="img/Lev_smallV.png", width="25px">
+                                <p id="d_s">0</p>
+                            </div>
+                        </div>
+
+                        <div class="line_block"></div> 
+
+                        <img src = "icon/Настройка.png", width = "33px", id="n_icon", onclick = "settings()">
+                    </div>
+                </div>
+
+                <div class="Kapital">
+                    <h1>деньги:</h1>
+                    <p id="p">0</p>
+                </div>
+
+            </div>
+            
+            <div class="Big_Money", id="B_id">
+                <img src="img/LevMoney2.png" alt="Картинка кнопки" width="305px" id="M_btn" onclick="alerted()" onmousedown="creatobj(event)">
+            </div>
+
+            <div class="dast_reg">
+
+                <div class = "dast_block" id="dast_block1" style="display: none;">
+                    <div class="dastijenie">
+                        <img src="img/mouse-hand.png" width="60px", height="60px", style="margin-left:10px;">
+                        <div class="dast_name">
+                            <h1>ДОСТИЖЕНИЕ ПОЛУЧЕНО!</h1>
+                            <div class="line_gorizontal"></div>
+                            <p>Первый клик и первая Монета Lion Coin</p>
+                        </div>
+                        <div style="height:135%;">
+                            <div id="delete_d1", class="delete_d"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "dast_block" id="dast_block2" style="display: none;">
+                    <div class="dastijenie">
+                        <img src="img/mouse-hand.png" width="60px", height="60px", style="margin-left:10px;">
+                        <div class="dast_name">
+                            <h1>ДОСТИЖЕНИЕ ПОЛУЧЕНО!</h1>
+                            <div class="line_gorizontal"></div>
+                            <p>Вы достали хакера</p>
+                        </div>
+                        <div style="height:135%;">
+                            <div id="delete_d2", class="delete_d"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "dast_block" id="dast_block3" style="display: none;">
+                    <div class="dastijenie">
+                        <img src="img/mouse-hand.png" width="60px", height="60px", style="margin-left:10px;">
+                        <div class="dast_name">
+                            <h1>ДОСТИЖЕНИЕ ПОЛУЧЕНО!</h1>
+                            <div class="line_gorizontal"></div>
+                            <p>Не хватило денег на RTX 4050</p>
+                        </div>
+                        <div style="height:135%;">
+                            <div id="delete_d3", class="delete_d"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "dast_block" id="dast_block4" style="display: none;">
+                    <div class="dastijenie">
+                        <img src="img/mouse-hand.png" width="60px", height="60px", style="margin-left:10px;">
+                        <div class="dast_name">
+                            <h1>ДОСТИЖЕНИЕ ПОЛУЧЕНО!</h1>
+                            <div class="line_gorizontal"></div>
+                            <p>Попытались украсть</p>
+                        </div>
+                        <div style="height:135%;">
+                            <div id="delete_d4", class="delete_d"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "dast_block" id="dast_block5" style="display: none;">
+                    <div class="dastijenie">
+                        <img src="img/mouse-hand.png" width="60px", height="60px", style="margin-left:10px;">
+                        <div class="dast_name">
+                            <h1>ДОСТИЖЕНИЕ ПОЛУЧЕНО!</h1>
+                            <div class="line_gorizontal"></div>
+                            <p>Брокер послал вас нахер)</p>
+                        </div>
+                        <div style="height:135%;">
+                            <div id="delete_d5", class="delete_d"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <!-- <div class="Spad"></div> -->
+        </main>
+
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script><!-- Anim -->
+    <script type="module" src="./script.js"></script> <!-- основная логика -->
+    <script type="module" src="coockie.js"></script> <!-- куки -->
+    <script type="module" src="animations.js"></script> <!-- анимации -->
+    <script type="module" src="kurs_script.js"></script> <!-- Курс Coin -->
+
+</body>
+</html>

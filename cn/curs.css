@@ -1,0 +1,475 @@
+/*Style for курс Coin*/
+
+/*Кнопка для перехода в режим покупки акция*/
+
+
+.button_buy_action_block{
+    width: 100%;
+    position: absolute; /* Абсолютное позиционирование внутри main */
+    bottom: 0; /* Остаётся внизу контейнера main */
+    left: 0;
+
+    display: flex; 
+    justify-content: center;
+    align-items: end;
+
+}
+
+.button_sell_action {
+    width: 230px;
+    height: auto;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+    border: #1a1a1a 1px solid;
+
+    background: rgb(255, 217, 4); /* Желтый цвет по умолчанию */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; /* Скрывает любые выступающие элементы */
+    transition: background-color 0.3s ease; /* Плавный переход */
+}
+
+.button_sell_action:hover {
+    box-shadow: 0px 1px 2px 1px rgba(255, 255, 255, 0.2);
+    border: #dbdbdb 1px solid;
+    background-color: rgba(255, 217, 4, 0.7); /* Прозрачный фон при наведении */
+}
+
+.button_sell_action h1 {
+    margin: 0;
+    color: #222222;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Exo 2", sans-serif;
+}
+
+
+
+
+.button_buy_action{
+    width: 230px;
+    height: auto;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    margin-left: 5px;
+    margin-right: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+    border: #696969 1px solid;
+    margin-bottom: 10px;
+
+    background: #272727;
+    padding-bottom: 2px;
+
+    cursor: pointer;
+}
+
+.button_buy_action:hover{
+    background-color: rgba(25, 25, 25, 0.5);
+    box-shadow: 0px 1px 2px 1px rgba(255, 215, 60, 0.2);
+    border: #000000 1px solid;
+}
+
+.button_buy_action h1{
+    margin: 0%;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Exo 2", sans-serif;
+}
+
+
+
+/*меню покупки акций*/
+.Buy_action_menu{
+    width: 100%;
+    height: 187px;
+    position: absolute; /* Абсолютное позиционирование внутри main */
+    bottom: 0; /* Остаётся внизу контейнера main */
+    left: 0;
+
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+    display: none;
+}
+
+.Buy_action_menu_child{
+    width: 470px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu_action_up{
+    width: 100%;
+    height:auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buy_action{
+    width: auto;
+    height: auto;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 5px;
+
+    border-radius: 5px;
+    color: white;
+    transition: .2s linear;
+    background: #0B63F6;
+    padding-bottom: 2px;
+
+    cursor: pointer;
+}
+
+.buy_action:hover {
+    box-shadow: 0 0 0 2px rgb(60,60,60), 0 0 0 4px #3C82F8;
+}
+
+.buy_action h1{
+    font-size: 25px;
+    margin: 0px;
+    font-weight: 600;
+    font-family: "Exo 2", sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+.menu_action_up h1{
+    margin: 0px;
+}
+
+.close_menu_a{
+    user-select: none;    /* Отключает выделение */
+    cursor: pointer;      /* Изменяет курсор на "руку" */
+    -webkit-user-drag: none; /* Отключает перетаскивание в WebKit-браузерах */
+    -moz-user-select: none;   /* Отключает выделение в Firefox */
+    -ms-user-select: none;    /* Отключает выделение в старых IE */
+
+    background-image: url("icon/delete.png");
+    background-size: cover; /* Изображение растягивается по всей площади блока */
+    background-position: center; /* Центрирование фона */
+    background-repeat: no-repeat; /* Отключаем повторение изображения */
+    background-size: 20px 20px;
+
+    width: 30px;
+    height: 35px;
+    background-color: #1e1e1e;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close_menu_a:hover{
+   background-size: 17px 17px;
+   background-color: rgb(35, 34, 34);
+}
+
+
+
+
+
+.menu_action_down{
+    width: 100%;
+    height:auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+/*блок с вводом денег*/
+
+.action_cost{
+    height: 60px;
+    width: 290px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action_cost h1{
+    margin: 0%;
+    font-size: 25px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+.inpt_money_action{
+    width: 140px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    border: 2px solid black;
+
+    background-color: #0B63F6;
+}
+
+.inpt_money_action input{
+    width: 50px;
+    height: 40px;
+    padding-left: 0px;
+}
+
+.variants_of_money{
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.variants_of_money h2:nth-child(1){
+    font-size: 11px;
+    margin: 0%;
+}
+
+.variants_of_money h2:nth-child(2){
+    font-size: 24px;
+    margin: 0%;
+}
+
+.variants_of_money h2:nth-child(3){
+    font-size: 11px;
+    margin: 0%;
+}
+
+
+.money_choose{
+    height: 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.choose_up{
+    width: 16px;
+    height: 20px;
+
+    user-select: none;    /* Отключает выделение */
+    cursor: pointer;      /* Изменяет курсор на "руку" */
+    -webkit-user-drag: none; /* Отключает перетаскивание в WebKit-браузерах */
+    -moz-user-select: none;   /* Отключает выделение в Firefox */
+    -ms-user-select: none;    /* Отключает выделение в старых IE */
+
+    background-image: url("icon/ch_uor-d.png");
+    background-size: cover; /* Изображение растягивается по всей площади блока */
+    background-position: center; /* Центрирование фона */
+    background-repeat: no-repeat; /* Отключаем повторение изображения */
+    background-size: 20px 20px;
+}
+
+.choose_down{
+    width: 16px;
+    height: 20px;
+
+    user-select: none;    /* Отключает выделение */
+    cursor: pointer;      /* Изменяет курсор на "руку" */
+    -webkit-user-drag: none; /* Отключает перетаскивание в WebKit-браузерах */
+    -moz-user-select: none;   /* Отключает выделение в Firefox */
+    -ms-user-select: none;    /* Отключает выделение в старых IE */
+
+    background-image: url("icon/ch_uor-d.png");
+    background-size: cover; /* Изображение растягивается по всей площади блока */
+    background-position: center; /* Центрирование фона */
+    background-repeat: no-repeat; /* Отключаем повторение изображения */
+    background-size: 20px 20px;
+    transform: rotate(180deg);
+}
+
+.line_ch{
+    width: 10px;
+    border-top: 1px solid rgb(66, 66, 66);
+}
+
+.input-container {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 2px 2px;
+        width: 80px;
+        height: 30px;
+        background-color: #fff;
+}
+
+.input-container img {
+    color: #888;
+    position: relative;
+}
+
+.input-container input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 15px;
+    padding: 0%;
+    padding-left: 15px;
+    height: 20px;
+    text-align: center;
+
+}
+
+.input-container input::placeholder {
+    color: #aaa;
+}
+
+/* Для браузеров на основе WebKit (Chrome, Safari, Edge) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+
+
+/*Основной блок*/
+
+
+.grafic{
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Ширина блока будет 100% от доступного пространства */
+    max-width: 1200px; /* Максимальная ширина */
+    min-height: 187px;
+    height: 187px;
+    max-height: 180px; /* Можно оставить фиксированной */
+}
+
+.kurs_since{
+    position: relative;
+    width:100%;
+    height: 187px;
+    background-color: rgb(60, 60, 60);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+.kurs_block_spawn{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    justify-content: start;
+    align-items: center;
+}
+
+.Check{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+    height: 100%;
+}
+
+.Check h1{
+    font-size: 15px;
+    margin:0px;
+    color: rgb(100, 90, 246);
+}
+
+.Check div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px rgb(98, 0, 178);
+    padding-left: 1px;
+    padding-right: 1px;
+    min-width: 15px;
+}
+
+.kurs_show{
+    min-height: 100%;
+    width: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.kurs_block{
+    width: 100%;
+    border: ridge 2px black;
+}
+
+@media (min-width: 300px) {
+    .action_cost{
+        display: none;
+    }
+    .menu_action_down{
+        justify-content: center;
+    }
+    .menu_action_up{
+        width: 80%;
+    }
+    .button_buy_action_block{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+ }
+
+ @media (min-width: 1310px) {
+    .action_cost{
+        display: flex;
+    }
+    .menu_action_down{
+        justify-content: space-between;
+    }
+    .menu_action_up{
+        width: 100%;
+    }
+    .button_buy_action_block{
+        margin-left: 5px;
+        margin-right: 5px;
+    
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+ }

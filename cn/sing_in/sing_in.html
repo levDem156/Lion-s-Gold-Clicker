@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sing in to Clicker</title>
+    <link href="sing_in_style.css" rel="stylesheet">
+</head>
+<body>
+    <a href="https://clicker.local" class="header_select"><img src="../img/doom.png" alt="Coin" class="coin"></a>
+    <img src="../img/mouse-hand.png" alt="cursor" class="cursor">
+
+    <main>
+        <div class = "form1">
+            <div class="block1">
+                <h1>Sing in</h1>
+                <div class="messeg">
+                    <div class = "obj"><p>Google</p><img src="../icon/icons8-google-240.png"></div>
+                    <div class = "obj"><p>Facebook</p><img src="../icon/icons8-facebook-240.png"></div>
+                    <div class = "obj"><p>Github</p><img src="../icon/icons8-github-256.png"></div>
+                    <div class = "obj"><p>VK</p><img src="../icon/icons8-vk-240.png"></div>
+                </div>
+            </div>
+            <h2>OR</h2>
+            <form id = "loginForm">
+                <label>
+                    Email
+                    <input type="email" class = "input1" id = "email" required>
+                </label>
+
+                <label>
+                    Password
+                    <input type="password" class = "input1" id = "password" required>
+                </label>
+
+                <input type="submit" name="submit" value="Sing in" class = "btn1">
+
+                <!-- <a href="https://clicker.local" class = "Forgot">Forgot password?</a> -->
+                <p class = "Forgot1">У вас еще нет аккаунта? <a href="https://clicker.local/sing_up/sing_up.html" class = "Forgot">Регистрация.</a></p>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
